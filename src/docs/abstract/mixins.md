@@ -4,7 +4,7 @@
 
 ### description
 
-** mixin for max responsive design **
+ mixin for max responsive design 
 
 - var $width-pixels to set the screen size
 - var $width-em to convet px to em
@@ -34,8 +34,8 @@
 
 ### description
 
-** they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
-the breakpoints I used were inspired by Bootstrap **
+they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+the breakpoints I used were inspired by Bootstrap 
 
 - var $breakpoint to set the type of screen size
 
