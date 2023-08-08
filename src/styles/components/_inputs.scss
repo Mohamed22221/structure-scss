@@ -1,0 +1,82 @@
+.input{
+ padding: 15px 20px;
+ border-radius:$border-radius-sm ;
+ @extend %FlexDefault;
+ @include for-phone-only {
+  padding: 10px 10px;
+}
+ &__box{
+  display: flex;
+  flex-direction: column;
+  margin: 30px ;
+  width: 380px;
+  @include for-phone-only {
+    width: 100%;
+    margin: 10px;
+  }
+ }
+ &__label {
+  color: $primary-dark-color;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: 600;
+  @include for-phone-only {
+    font-size: 1.6rem;
+  }
+ }
+&__field {
+ border:1px solid $info-color;
+ font-size: 1.5rem;
+ color: $info-color;
+ &::placeholder{
+  font-size: 1.5rem;
+  color: $info-color;
+ }
+ &:focus{
+  background-color: #fff;
+    border-color: #fba30d;
+    box-shadow: 0 10px 50px rgb(251 163 13 / 20%);
+ }
+ @include for-phone-only {
+  width: 100%;
+
+}
+ 
+}
+
+&__select{
+ border:1px solid $info-color;
+ font-size: 1.9rem;
+ color: $info-color;
+ &:focus{
+  background-color: #fff;
+    border-color: #fba30d;
+    box-shadow: 0 10px 50px rgb(251 163 13 / 20%);
+ }
+ @include for-phone-only {
+  width: 100%;
+
+}
+
+}
+
+ &__search{
+  background-color: $bg-light-color;
+  color: $info-color;
+  width: 50rem;
+  svg{
+   margin: 0 10px 5px 10px;
+   font-size: 2rem;
+  }
+  input{
+   width: 100%;
+   padding: 10px;
+   &::placeholder{
+    font-size: 1.9rem;
+    color: $info-color;
+   }
+  }
+
+ }
+
+}

@@ -1,0 +1,5 @@
+.ant-drawer-content-wrapper {
+  @include responsive-max(768) {
+    width: 100% !important;
+  }
+}

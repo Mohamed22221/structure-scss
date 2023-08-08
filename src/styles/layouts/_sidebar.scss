@@ -1,0 +1,151 @@
+.sidebar {
+ background-color: $white-color-1;
+ box-shadow: $box-shadow-light;
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ height: 100%;
+ width: 300px;
+ z-index: 100;
+ padding: 20px 15px;
+ @extend %Ease;
+ 
+ @include for-tablet-portrait-up{
+  z-index: 98;
+  width: 300px;
+ }
+ .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 15px 0;
+  height: 144px;
+  @extend %Ease;
+ }
+
+ .links {
+  margin: 20px 0;
+
+  .route {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   border-radius: $border-radius-sm;
+   padding: 15px 25px;
+   margin: 20px 0;
+
+  }
+
+  p {
+   color: $info-color;
+   margin-top: 10px;
+   @extend %Ease;
+  }
+
+  svg {
+   font-size: $text-3xl ;
+   margin-right: 10px;
+   color: $info-color ;
+  }
+
+  .active {
+   background-color: $primary-light-color;
+
+   p {
+    color: white;
+
+   }
+
+   svg {
+    color: $white-color ;
+   }
+  }
+
+ }
+ .arrow{
+  position: absolute;
+  cursor: pointer;
+  top: 40px;
+  right: -16px;
+  background-color: $primary-light-color;
+  padding: 5px;
+  border-radius: 50%;
+  svg{
+   @extend %Ease;
+   color: white;
+  }
+  @include for-tablet-portrait-up{
+   display: none;
+  }
+ }
+ //responsive
+ @include for-phone-only{
+  width: 250px;
+  .logo{
+   margin-top: 45px;
+   height: 120px;
+  }
+  .links{
+   .route{
+    padding: 7px 25px;
+    margin: 5px;
+   }
+  }
+
+ }
+}
+//toggle width side
+.sidehide {
+ width: 120px;
+
+ .logo {
+  height: 144px;
+  img {
+   width: 100px;
+   @extend %Ease;
+
+  }
+ }
+
+ .links {
+  p {
+   width: 0;
+   opacity: 0;
+   visibility: hidden;
+   @extend %Ease;
+  }
+
+  .route {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 0;
+
+   svg {
+    margin-right: 0;
+   }
+  }
+
+ }
+ .arrow{
+  svg{
+   @extend %Ease;
+   transform: rotate(180deg);
+  }
+ }
+
+}
+//show & hide sidebar
+.hide{
+ @include for-tablet-portrait-up{
+  transform: translateX(-380px);
+ }
+
+}
+.show{
+ @include for-tablet-portrait-up{
+  transform: translateX(0px);
+ }
+
+}

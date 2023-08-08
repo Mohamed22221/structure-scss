@@ -1,0 +1,39 @@
+//folder abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+
+//folder base
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./base/animation";
+//folder components
+@import "./components/Tabel";
+@import "./components/buttons";
+@import "./components/inputs";
+@import "./components/notification";
+
+//folder layouts
+@import "./layouts/container";
+@import "./layouts/sidebar";
+@import "./layouts/topbar";
+@import "./layouts/blursidebar";
+
+
+//folder pages user
+@import "./pages/dashboardUser";
+@import "./pages/analyticsUser";
+@import "./pages/domainUser";
+@import "./pages/contactUser";
+@import "./pages/auth";
+//folder pages admin
+@import "./pages/dashboardAdmin";
+@import "./pages/invoices";
+@import "./pages/users";
+@import "./pages/supportAdmin"
+
+
+
+
+

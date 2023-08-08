@@ -1,0 +1,17 @@
+.row {
+ display: grid;
+ grid-template-columns: repeat(12, 1fr);
+ grid-gap: 20px;
+}
+//medium screen
+@media (min-width: 992px) {
+ .col-md-4 {
+     grid-column: span 4;
+     background-color: blue;
+
+ }
+ .col-md-8 {
+   grid-column: span 8;
+   background-color: red;
+}
+}

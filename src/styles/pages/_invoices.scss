@@ -1,0 +1,72 @@
+//start wedgits invoices sec-1
+.wedgits-invoices{
+ @extend %default-item;
+ .item-wedgits{
+  .about-item{
+   @extend %FlexDefault;
+ 
+   .counter{
+    width: 45%;
+   }
+   .text-about-item{
+    h6,h5,p{
+     padding-block:2px ;
+    }
+    h6{
+     font-weight: 500;
+    }
+    p{
+     font-size: 1.3rem;
+     color: $info-color;
+     
+    }
+   }
+  }
+
+ }
+ @include for-desktop-up {
+  .item-wedgits{
+   border-right: 3px dotted $info-color;
+   padding: 10px;
+   .counter{
+    width: 60%;
+   }
+
+  }
+ }
+ .item-wedgits:not(:last-child){
+  border-right: 3px dotted $info-color;
+
+ }
+}
+//end wedgits invoices sec-1
+.services-type{
+ .services{
+  justify-content: space-between;
+  .input__select ,.input__field ,.search ,.search-input{
+   background-color: white;
+   margin: 8px;
+   border: 0;
+   color: black !important;
+   @include for-tablet-landscape-up {
+    
+     margin: 8px 0;
+    
+  } 
+  }
+  .search-input{
+   input , svg{
+    color: $info-color;
+    font-size: 1.5rem;
+   }
+   input{
+    width: 100%;
+   }
+   svg{
+    margin-right: 15px;
+    font-size: 2.2rem;
+   }
+  }
+
+ }
+}

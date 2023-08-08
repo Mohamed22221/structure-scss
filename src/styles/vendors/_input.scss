@@ -1,0 +1,90 @@
+.form__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap !important;
+  font-size: 16px !important;
+
+  margin: 5px 0;
+  column-gap: 1rem;
+  @include responsive-max(767) {
+    gap: 0rem;
+  }
+}
+.ant-form-horizontal .ant-form-item-control {
+  flex: auto;
+}
+.ant-input,
+.ant-select-selector {
+  color: $color-dark !important;
+  box-sizing: border-box !important;
+  height: max-content !important ;
+  padding: 0.8rem 0.5rem !important;
+  font-size: 16px !important;
+
+  @include responsive-max(767) {
+    gap: 0.5rem;
+  }
+}
+
+.ant-select-selection-search-input {
+  padding: 0.2rem 0.5rem !important;
+}
+.ant-select-selection-item {
+  background-color: $bg-primary !important;
+  color: $color-primary !important;
+  padding: 0 2rem;
+  border-radius: 1rem;
+}
+.ant-form-item-control {
+  width: 100% !important;
+}
+
+.ant-form-item-label > label {
+  font-weight: bold;
+}
+
+.ant-form-item-label,
+.ant-form-item-required {
+  @include font();
+
+  margin-bottom: 1rem;
+
+  text-align: start !important;
+}
+.ant-form-item-row {
+  flex-direction: column;
+}
+.ant-form-item-required {
+  margin: 0 !important;
+}
+.ant-form-item-control-input {
+  align-items: unset !important;
+}
+.ant-upload .ant-upload-btn {
+  padding: 0 !important;
+}
+// .ant-form-item .img-ads {
+//   width: 100%;
+// }
+.ant-upload-text {
+  color: $color-primary !important;
+}
+.ant-upload-drag {
+  background: $bg-primary !important;
+  padding: 1rem;
+}
+
+// checkbox
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: $color-primary !important;
+  border-color: $color-primary !important;
+}
+.ant-checkbox-inner {
+  width: 3rem !important;
+  height: 3rem !important;
+
+  &::after {
+    transform: rotate(45deg) scale(2) translate(-30%, -50%) !important;
+  }
+}

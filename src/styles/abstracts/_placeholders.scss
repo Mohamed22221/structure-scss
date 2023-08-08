@@ -1,0 +1,51 @@
+%CenterAbsoluteElement {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+%FlexDefault{
+
+  @include prefix(display, flex);
+  @include prefix(align-items, center);
+}
+%FlexColDefault{
+
+  @include prefix(display, flex);
+  @include prefix(align-items, center);
+  @include prefix(flex-direction, column)
+}
+
+%FlexRowCenter{
+
+ @include prefix(display, flex);
+ @include prefix(justify-content, center);
+ @include prefix(align-items, center);
+}
+%FlexColCenter{
+
+  @include prefix(display, flex);
+  @include prefix(justify-content, center);
+  @include prefix(align-items, center);
+  @include prefix(flex-direction, column);
+ }
+%FlexRowBetween{
+
+  @include prefix(display, flex);
+  @include prefix(justify-content, space-between);
+  @include prefix(align-items, center);
+
+
+}
+%FlexRowEvenly{
+
+  @include prefix(display, flex);
+  @include prefix(justify-content, space-evenly);
+  @include prefix(align-items, center);
+
+
+}
+
+%Ease {
+  @include prefix(transition , all 0.35s ease-in-out);
+}

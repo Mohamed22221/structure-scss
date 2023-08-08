@@ -1,0 +1,79 @@
+.domain-overview,
+.dns-Tabel {
+ @extend %default-item;
+
+}
+
+.dns-Tabel {
+ .flow {
+  width: 100%;
+  @include for-desktop-up{
+   overflow-x: scroll
+  }
+ }
+
+ .head-dns {
+  @extend %FlexRowBetween;
+  flex-wrap: wrap;
+  @include for-phone-only{
+   .three-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+  }
+
+ }
+
+ .body-dns {
+  margin: 4rem 1.6rem;
+
+
+  .table>:not(caption)>*>* {
+   padding: 1.8rem 1.5rem;
+   border-bottom-width: 0rem;
+
+   
+  }
+
+  .title{
+   font-size: 1.6rem;
+   color: $info-color;
+   font-weight: bold;
+  }
+  .title-add{
+   color: $primary-light-color;
+   cursor: pointer;
+  }
+  .table-hover{
+   background-color: $primary-dark-color;
+   color: white;
+  }
+
+
+  .primary{
+   background-color: #F5F6FA;
+   color: $info-color;
+   font-size: 1.5rem;
+   svg{
+    font-size: 28px;
+   }
+
+  }
+
+
+
+  @include for-desktop-up{
+   margin: 3rem 0rem ;
+   .title ,.primary{
+    font-size: 1.3rem;
+   }
+  }
+ }
+
+}
+.login-bage{
+ .sidebar{
+  display: none;
+ }
+}

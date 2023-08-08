@@ -1,0 +1,83 @@
+$primary-dark-color: #2A2E33;
+$primary-light-color: #FBA30D;
+$primary-light-color2: #fba40d77;
+$bg-light-color:#F5F6FA;
+$info-color: #A6A6A6;
+$info-color-2: #868E96;
+$danger-light-color: #D3D3FD;
+$danger-dark-color: #e01e5a;
+$bs-alert-color: #923214;
+$bs-alert-bg: #fdddd3;
+$bs-alert-border-color: #fbccbc;
+$bs-warn-color: #665321;
+$bs-warn-bg: #fff5dc;
+$bs-warn-border-color: #fff1cb;
+$bs-info-color: #2e3f96;
+$bs-info-bg: #dbe1fe;
+$bs-info-border-color: #cad2fe;
+$bs-success-color: #2a7166;
+$bs-success-bg: #d9f5f0;
+$bs-success-border-color: #c8ebe6;
+// transparent
+$transparent-color: transparent;
+// whites
+$white-color-1: #ffffff;
+$white-color: #ffffff;
+$black-color: #000000;
+
+
+// grays
+$gray-color-1: #f4f6f8;
+$gray-color-2: #868E96;
+$gray-color-3: #8c96a9;
+$gray-color-4: #485460;
+$gray-color-5: #333333;
+$gray-color-6: #1d2b33;
+
+// Weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+//font sizes
+$text-xs:   1rem;
+$text-sm:   1.3rem;
+$text-base: 1.6rem;
+$text-lg:   1.7rem;
+$text-xl:   1.8rem;
+$text-2xl:  2rem;
+$text-3xl:  3rem;
+$text-4xl:  4rem;
+$text-5xl:  5rem;
+$text-6xl:  6rem;
+$text-7xl:  7rem;
+
+// border colors
+$border-default-color: $gray-color-2;
+$border-primary-color: $primary-dark-color;
+$border-white-color: $white-color-1;
+
+// border radius
+$border-radius: 2rem;
+$border-radius-sm: 1rem;
+$border-radius-2: 12px;
+$border-radius-3: 16px;
+$border-radius-4: 22px;
+
+// paddings
+$button-default-padding: 6px 20px;
+$navlink-padding-x: 0px;
+$card-padding-y: 1.25rem;
+$badge-p-padding-y: 8px;
+$badge-p-padding-x: 15px;
+$breadcrumb-bottom-margin: 12px;
+
+// shadows
+$box-shadow-light: 0px 4px 8px rgba(45, 45, 45, 0.16);;
+$box-shadow-medium: 0 8px 11px rgba(0, 0, 0, 0.1), 0 9px 12px rgba(0, 0, 0, 0.2);
+
+
+

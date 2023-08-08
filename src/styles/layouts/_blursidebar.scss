@@ -1,0 +1,41 @@
+.main-blur-sidebar{
+ position: fixed;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ width: 40rem;
+ height: 100vh;
+ background-color: white;
+ z-index: 110;
+ box-shadow: 0 7px 10px rgb(71 71 71 / 9%);
+ transform: translateX(40rem);
+ @extend %Ease ;
+ @include for-phone-only{
+  width: 29rem;
+ }
+}
+.show{
+ transform: translateX(0rem);
+}
+.hide-blur{
+ opacity: 0;
+ visibility: hidden;
+}
+.show-blur{
+ opacity: 1;
+}
+.bg-blur{
+ background-color: rgba(0, 0, 0, 0.164);
+ height: 100vh;
+ left: 0;
+ position: fixed;
+ top: 0;
+ width:  100%;
+ z-index: 109;
+ backdrop-filter: blur(0.25rem);
+ background-color: rgba(0,0,0,.25);
+ will-change: backdrop-filter;
+ transition: 0.4s ease-in-out;
+ cursor: pointer;
+
+}

@@ -1,0 +1,89 @@
+/* (--1--) mixin responsive */
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (max-width: 768px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 992px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-laptop-up {
+  @media (max-width: 1400px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (max-width: 1500px) { @content; }
+}
+
+@mixin responsive-max($width-pixels) {
+  $width-em: calc($width-pixels/16);
+  @media (max-width:'#{$width-em}em') {
+    @content;
+  }
+}
+@mixin responsive-min($min-width) {
+  @media screen and (min-width:'#{$min-width}px') {
+    @content;
+  }
+}
+/* (--2--) mixin circle background*/
+@mixin circle($dimentions) {
+  border-radius: 50%;
+  width: $dimentions;
+  height: $dimentions;
+}
+
+/* (--3--) prefix*/
+@mixin prefix($key, $value) {
+  -webkit-#{$key}: #{$value};
+  -moz-#{$key}: #{$value};
+  -ms-#{$key}: #{$value};
+  -o-#{$key}: #{$value};
+  #{$key}: #{$value};
+  //@include prefix(transform, scale3d(2.5, 2, 1.5));
+}
+
+/* (--4--) absolute position all sides */
+@mixin abs-position ($top, $right, $bottom, $left) {
+  position: absolute; 
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+/* (--5--) absolute position center*/ 
+@mixin center($top , $left) {
+  position: absolute;
+  top: #{$top};
+  left: #{$left};
+  @include prefix(transform, translate(-#{$left}, -#{$top}));
+  //@include center(-50%,-50% )
+}
+
+/* (--6--) absolute position vertically center*/ 
+@mixin center-vertically($top) {
+  position: absolute;
+  top: #{$top};
+  @include prefix(transform, translateY(-#{$top}));
+  //@include center-vertically(-50%)
+}
+
+/* (--7--) absolute position vertically center*/ 
+@mixin center-horizonta($left) {
+  position: absolute;
+  left: #{$left};
+  @include prefix(transform, translateX(#{$left}));
+  //@include center-horizonta(-50%)
+}
+
+
+
+
+
+
+
+
+

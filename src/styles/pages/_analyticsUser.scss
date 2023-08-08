@@ -1,0 +1,153 @@
+.wedgets-analytics {
+.apexcharts-theme-light{
+  width: 200px !important;
+}
+  //left wegdets 
+  .left-wedgets {
+
+    .counter,
+    .timer {
+      @extend %default-item;
+    }
+    .timer{
+      @extend %FlexRowCenter ;
+    }
+    .counter{
+      @extend %FlexRowBetween ;
+      .redial-bar{
+        width: 40%;
+      }
+      h4{
+        font-size: 1.8rem;
+      }
+    }
+
+    //left wegdets analytics timer
+    .timer {
+
+      flex-direction: column;
+
+      img {
+        margin-block: 2rem;
+      }
+
+      h4,
+      p {
+        padding-block: 1rem;
+        text-align: center;
+
+      }
+
+      p {
+        font-size: 2.1rem;
+      }
+
+      span {
+        color: $primary-light-color;
+      }
+    }
+
+    //left wegdets analytics timer
+    .counter {
+      height: calc(50% - 22px);
+
+      img {
+        padding: 2rem;
+      }
+    }
+    @include for-big-desktop-up{
+      .counter{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        .redial-bar{
+          width: 100%;
+        }
+        h4{
+          padding-bottom: 8px;
+        }
+      }
+      .timer p{
+        font-size: 1.5rem;
+
+      }
+      
+      img{
+        width: 100%
+      }
+
+    }
+  }
+
+  .right-wedgets {
+    @extend %default-item;
+    height: calc(100% - 35px);
+
+    canvas {
+      height: 300px !important;
+      width: 100%;
+    }
+
+    //start responsive phone wedgets-analytics
+    @include for-phone-only {
+      height: calc(100% - 10px);
+
+      canvas {
+        height: 90% !important;
+        width: 100%;
+      }
+    }
+
+    //end responsive phone wedgets-analytics
+    @include for-big-desktop-up{
+      canvas {
+        height: 80% !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+}
+
+//VPS Servers
+.main-vps-serveses {
+  @extend %default-item;
+  margin: 0 2.2rem;
+
+  .head-vps {
+    @extend %FlexRowBetween;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+
+  .body-vbs {
+    .item-vbs {
+      @extend %FlexRowBetween;
+      background-color: $bg-light-color;
+      border-radius: $border-radius-sm;
+      border: 1px solid $danger-light-color;
+      padding: 20px 40px;
+      margin: 10px;
+      p {
+        color: $info-color-2;
+      }
+
+      h5 {
+        font-weight: 500;
+      }
+    }
+  }
+
+  //start responsive phone wedgets-analytics
+  @include for-phone-only {
+    margin: 0rem ;
+    .head-vps{
+      justify-content: center
+    }
+  }
+
+  //end responsive phone wedgets-analytics
+
+}

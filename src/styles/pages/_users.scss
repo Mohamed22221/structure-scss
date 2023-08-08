@@ -1,0 +1,121 @@
+.main-information-user {
+
+ //card user information
+ .card-user {
+  @extend %default-item;
+
+  .head-card {
+   @extend %FlexDefault;
+   padding: 8px 0 20px 0;
+   border-bottom: 1px solid rgb(228, 228, 228);
+
+   img {
+    @include circle(130px)
+   }
+
+   .about-head {
+    margin: 0 10px 0 20px;
+
+    p {
+     margin: 10px 0px;
+     color: $info-color;
+    }
+   }
+  }
+
+  .about-card {
+   @extend %FlexRowBetween;
+
+   .item {
+    padding: 20px 20px;
+
+    h5 {
+     @extend %FlexDefault;
+     margin: 10px 0;
+
+     span {
+      margin: 0 5px;
+
+      svg {
+       font-size: 24px;
+       color: #2A2E33;
+
+      }
+     }
+    }
+
+    p {
+     color: $info-color;
+    }
+   }
+
+   @include for-tablet-portrait-up {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .item {
+     padding: 5px 5px;
+
+    }
+   }
+  }
+
+ }
+
+ //packeges user information
+ .main-packeges {
+  @extend %default-item;
+
+  .three-buttons {
+   width: fit-content;
+
+   @include for-tablet-portrait-up {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+   }
+  }
+
+  .body-packages {
+   padding: 20px 0 0 0;
+   margin: 10px 0 0 0;
+   .item-package{
+    position: relative;
+    margin: 30px 0;
+    padding: 40px 5px;
+    @extend %default-item;
+    border: 2px solid $primary-light-color;
+    box-shadow: 0px 4px 4px rgba(75, 75, 75, 0.16);
+    h3 ,h4{
+     text-align: center;
+     padding: 20px 0;
+     font-weight: 600;
+    }
+    h3{
+     color: $primary-light-color;
+
+    }
+    h4{
+     span{
+      color: $info-color !important;
+     }
+    }
+    .hide{
+     display: none;
+    }
+    .title{
+     position: absolute;
+     top: -25px;
+     left: 20px;
+     right: 20px;
+     padding: 10px;
+     border-radius: $border-radius-sm;
+     text-align: center;
+     font-size: 20px;
+     background-color: $primary-dark-color;
+     color: white;
+    }
+   }
+  }
+ }
+}

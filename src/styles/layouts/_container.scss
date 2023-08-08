@@ -1,0 +1,36 @@
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  position: relative;
+}
+.container-inline{
+  margin-inline:330px 40px ;
+  @extend %Ease;
+  @include for-tablet-portrait-up{
+    margin-inline:15px 15px ;
+  }
+}
+.container-inline-sm{
+  margin-inline:150px 40px ;
+  @extend %Ease;
+  @include for-tablet-portrait-up{
+    margin-inline:15px 15px ;
+  }
+}
+.sub-container {
+  margin-inline:330px 40px ;
+  margin-block:130px 40px ;
+  @extend %Ease;
+  @include for-tablet-portrait-up{
+    margin-inline:15px 15px ;
+    margin-block:110px 20px ;
+  }
+}
+.sub-container-sm {
+  margin-inline:150px 40px ;
+  margin-block:130px 40px ;
+  @extend %Ease;
+  @include for-tablet-portrait-up{
+    margin-inline:15px 15px ;
+  }
+}

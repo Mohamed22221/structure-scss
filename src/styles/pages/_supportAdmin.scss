@@ -1,0 +1,153 @@
+.main-support{
+ .items-support ,.comments-support{
+  @extend %default-item;
+  margin-block: 15px;
+ }
+ //start left support
+ .main-items-support{
+  .items-support{
+   margin-right: 20px;
+   .toggle-button{
+    @extend %FlexDefault;
+    margin-block: 10px;
+    button{
+     padding: 8px 12px;
+     margin-inline: 5px;
+     font-weight: 600;
+     color: $info-color;
+    }
+    .active{
+     color: black;
+    }
+   }
+   .data-support{
+    .item-support{
+     background-color:#F5F6FA;
+     border-radius: 1.4rem;
+     padding: 20px 15px;
+     margin: 20px 0;
+     cursor: pointer;
+     @extend %Ease ;
+     .date{
+      margin: 10px 0;
+      @extend %FlexRowBetween;
+      padding: 5px 0;
+      p{
+       font-size: 1.3rem;
+       color: $info-color;
+       @extend %Ease ;
+      }
+      span{
+       margin: 0 5px;
+       opacity: 0;
+       
+       svg{
+        font-size: 15px;
+       }
+      }
+     }
+     &:hover{
+      background-color:$primary-light-color ;
+      color: white;
+      p{
+       color: whitesmoke;
+      }
+      span{
+       opacity: 1;
+      }
+     }
+    }
+    .active-item{
+     background-color:$primary-light-color ;
+     color: white;
+     p{
+      color: whitesmoke !important;
+     }
+     span{
+      opacity: 1 !important;
+     }
+    }
+   }
+
+  }
+  @include for-tablet-landscape-up {
+   .items-support{
+    margin-right: 0px;
+
+   }
+ }
+ }
+  //end left support
+   //start right support => (comments)
+.main-comments-support{
+ h3{
+  margin: 10px 0;
+ }
+ .comments-support{
+  
+  .head-comments{
+   @extend %FlexRowBetween;
+   .person{
+    @extend %FlexDefault;
+    img{
+     @include circle(40px);
+    }
+    h5{
+     font-weight: 600;
+     margin: 0 5px 0 15px ;
+    }
+   }
+   .date{
+    font-size: 1.3rem;
+    color: black;
+    margin:  0;
+    padding: 0;
+   }
+  }
+  p{
+   padding: 25px 0 0 0;
+   color: $info-color;
+   font-size: 1.5rem;
+  }
+ }
+ .reply{
+  background-color: white;
+  padding: 12px 10px;
+  border-radius: $border-radius-sm;
+  @extend %FlexRowBetween;
+  .input{
+   padding: 0px 10px;
+   width: 100%;
+   margin: 0px 0;
+   font-size: 15px;
+   color: $info-color;
+   &::placeholder{
+    color: $info-color;
+   }
+  }
+  button{
+   background-color: $primary-light-color;
+   padding: 10px 20px;
+   border-radius: 10px;
+  }
+ }
+ @include for-phone-only{
+  h3{
+   font-size: 1.8rem;
+  }
+  .head-comments{
+   h5{
+    font-size: 1.4rem;
+    margin: 0 2px 0 10px ;
+   }
+   .date{
+    font-size: 1rem !important;
+    
+
+    
+   }
+  }
+ }
+}
+
+}

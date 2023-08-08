@@ -1,0 +1,54 @@
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%; // 1rem = 10 pixel
+}
+/* Preferred box-sizing value */
+*,*::after,*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+
+ box-sizing: inherit;
+ font-weight: 500;
+ background-color: $bg-light-color;
+ font-family: 'Poppins', sans-serif;
+ overflow-x: hidden;
+
+
+}
+ul ,menu ,ol {
+ list-style: none;
+}
+// margins & paddings
+body,button,h1, h2, h3, h4, h5, h6,input,nav,select,textarea,ul, ol, dl{
+ margin: 0;
+ padding: 0;
+}
+a,button,input,select,textarea{
+    background: none;
+    color: inherit;
+    border: none;
+    text-transform: none;
+    text-decoration: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+// Remove spacing between table cells
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+// on click button & link
+a, button {
+ cursor: pointer;
+ 
+}

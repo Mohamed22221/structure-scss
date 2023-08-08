@@ -1,0 +1,73 @@
+.top-wedgits{
+ .item-wedgets{
+  .bg-item {
+   @extend %default-item ;
+   @extend %FlexDefault;
+   padding: 3rem 1.5rem;
+   margin-block:1rem ;
+   img{
+    width: 70px;
+   }
+   .about{
+    margin: 10px 0px 10px 20px;
+    p{
+     font-size: 1.9rem;
+    }
+    h5{
+     font-size: 2.3rem;
+    }
+   }
+  }
+  @include for-laptop-up {
+   .bg-item{
+    padding: 2.5rem 1rem;
+    img{
+     width: 50px;
+    }
+    .about{
+     margin: 10px 0px 10px 15px;
+
+     p{
+      font-size: 1.6rem;
+     }
+     h5{
+      font-size: 2.1rem;
+     }
+    }
+
+   }
+ }
+ }
+
+}
+
+//website overview sec-2
+.website-overview {
+ .left-item{
+  @extend %default-item ;
+  margin: 10px;
+  height: 370px;
+  h5{
+   padding: 1.8rem 0
+  }
+ }
+ .right-item{
+  @extend %default-item ;
+  margin: 10px;
+  h5{
+   padding: 1.8rem 0
+  }
+   .apexcharts-legend.apx-legend-position-right{
+
+    position: absolute !important;
+    top: 100px !important;
+    left: 0;
+   }
+  
+
+
+ }
+ .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+  display: none;
+}
+ }

@@ -1,0 +1,215 @@
+%default-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: $border-radius-sm;
+}
+
+$percentages : (percentage-1 : (colors : #287AFB,
+    bg : rgba(40, 122, 251, 0.25)),
+  percentage-2 : (colors : #0AB28B,
+    bg : rgba(10, 178, 139, 0.25)),
+  percentage-3 : (colors : $primary-light-color,
+    bg : rgba(251, 163, 13, 0.25)),
+  percentage-4 : (colors :#E24A34,
+    bg : rgba(226, 74, 52, 0.25)));
+
+//sec 1 => page dashboard "wedgets"
+.wedgits {
+
+
+  .left-wedgets {
+
+    position: relative;
+
+    .item-wedgets {
+      @extend %default-item;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      p,
+      h4 {
+        @extend %FlexRowBetween;
+        padding: 1rem 0;
+        font-weight: $font-weight-medium;
+
+      }
+
+      img {
+        margin-top: 5.5rem;
+      }
+
+      .percentage {
+        @extend %FlexRowBetween;
+        width: 8rem;
+
+        padding: 1rem;
+        border-radius: $border-radius-sm;
+        margin-top: 0.8rem;
+
+        svg {
+          width: 1.5rem;
+          margin: 0.2rem 0;
+        }
+      }
+
+      @each $item ,
+      $value in $percentages {
+        .#{$item} {
+          color: map-get($value , colors);
+          background: map-get($value , bg);
+        }
+
+      }
+    }
+
+    @include for-laptop-up {
+      .img {
+        img {
+          width: 100%;
+        }
+
+        width: 90px;
+
+      }
+    }
+
+  }
+
+
+  //right wedget 
+  .right-wedgets {
+    @extend %default-item;
+    height: 93%;
+
+    h4 {
+      padding: 1rem 0;
+      font-weight: $font-weight-medium;
+    }
+
+    p {
+      padding: 0.5rem 0;
+      color: $info-color;
+      font-weight: $font-weight-regular;
+    }
+
+    .item-right-wedgets {
+      @extend %FlexRowBetween;
+      border: 0.2rem solid $danger-light-color ;
+      border-radius: $border-radius-sm ;
+      padding: 1.5rem 2.5rem;
+      margin-block: 1rem;
+
+      h5,
+      p {
+        padding: 0.7rem 0;
+      }
+    }
+
+    //start responsive phone
+    @include for-phone-only {
+      .item-right-wedgets {
+        padding: 1.5rem 1rem;
+
+        p {
+          font-size: 14px
+        }
+      }
+
+    }
+
+    //end responsive phone
+
+  }
+}
+
+//sec 2 => page dashboard "Traffic overview"
+.traffic-overview {
+  @extend %default-item;
+  position: relative;
+
+
+  .header-overview {
+    @extend %FlexRowBetween;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+    label {
+      font-size: 1.7rem;
+      margin: 14px;
+    }
+  }
+
+  .item-about {
+    padding: 2rem;
+    border-radius: $border-radius-sm ;
+
+    h3,
+    p {
+      margin: 1rem;
+
+    }
+
+    span {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 2.4rem;
+    }
+  }
+
+  .daily,
+  .hourly {
+    margin: 20px 60px;
+
+    @include for-tablet-landscape-up {
+      margin: 20px 0;
+    }
+
+    @include for-desktop-up {
+      margin: 20px 20px;
+    }
+  }
+
+  .daily {
+    background: rgba(10, 178, 139, 0.2);
+    color: #0AB28B;
+  }
+
+  .hourly {
+    background: rgba(40, 122, 251, 0.2);
+    color: #287AFB;
+  }
+
+  .chart {
+    margin: 20px 0;
+  }
+
+  .mixed-chart {
+
+    .apx-legend-position-bottom {
+      display: none;
+    }
+
+  }
+
+  //start responsive phone
+  @include for-phone-only {
+
+    .daily,
+    .hourly {
+      margin: 20px 0px;
+    }
+
+    .charts .item-about {
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
+    }
+
+  }
+
+  //end responsive phone
+}
