@@ -1,21 +1,33 @@
 /* (--1--) mixin responsive */
 @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 @mixin for-tablet-portrait-up {
-  @media (max-width: 768px) { @content; }
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 @mixin for-tablet-landscape-up {
-  @media (max-width: 992px) { @content; }
+  @media (max-width: 992px) {
+    @content;
+  }
 }
 @mixin for-desktop-up {
-  @media (max-width: 1200px) { @content; }
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
 @mixin for-laptop-up {
-  @media (max-width: 1400px) { @content; }
+  @media (max-width: 1400px) {
+    @content;
+  }
 }
 @mixin for-big-desktop-up {
-  @media (max-width: 1500px) { @content; }
+  @media (max-width: 1500px) {
+    @content;
+  }
 }
 
 @mixin responsive-max($width-pixels) {
@@ -47,15 +59,15 @@
 }
 
 /* (--4--) absolute position all sides */
-@mixin abs-position ($top, $right, $bottom, $left) {
-  position: absolute; 
+@mixin abs-position($top, $right, $bottom, $left) {
+  position: absolute;
   top: $top;
   right: $right;
   bottom: $bottom;
   left: $left;
 }
-/* (--5--) absolute position center*/ 
-@mixin center($top , $left) {
+/* (--5--) absolute position center*/
+@mixin center($top, $left) {
   position: absolute;
   top: #{$top};
   left: #{$left};
@@ -63,7 +75,7 @@
   //@include center(-50%,-50% )
 }
 
-/* (--6--) absolute position vertically center*/ 
+/* (--6--) absolute position vertically center*/
 @mixin center-vertically($top) {
   position: absolute;
   top: #{$top};
@@ -71,19 +83,32 @@
   //@include center-vertically(-50%)
 }
 
-/* (--7--) absolute position vertically center*/ 
+/* (--7--) absolute position vertically center*/
 @mixin center-horizonta($left) {
   position: absolute;
   left: #{$left};
   @include prefix(transform, translateX(#{$left}));
   //@include center-horizonta(-50%)
 }
+@mixin border-solid($width, $color) {
+  border: solid #{$width} #{$color};
+  // @include border-solid(1px, red);
+}
 
+@mixin backgroundProps($changeable, $val, $val2, $prop1, $prop2) {
+  background-#{$changeable}: $val;
+  position: $val2;
+  #{$prop1}: 0px;
+  #{$prop2}: 0px;
+  // @include backgroundProps("image", url("img.png"), absolute, top, right);
+  // @include backgroundProps("color", lightgray, absolute, top, left);
+}
 
-
-
-
-
-
-
-
+$properties: (margin, padding);
+@mixin space-value($side, $value) {
+    @each $prop in $properties {
+        #{$prop}-#{$side}: $value;
+    }
+    // @include space-value(top, 10px);
+    // @include space-value(left, 10px);
+}
