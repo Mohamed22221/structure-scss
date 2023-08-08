@@ -31,16 +31,12 @@
 }
 
 @mixin responsive-max($width-pixels) {
-  $width-em: calc($width-pixels/16);
+  $width-em:  calc($width-pixels/16);
   @media (max-width:'#{$width-em}em') {
     @content;
   }
 }
-@mixin responsive-min($min-width) {
-  @media screen and (min-width:'#{$min-width}px') {
-    @content;
-  }
-}
+
 /* (--2--) mixin circle background*/
 @mixin circle($dimentions) {
   border-radius: 50%;
@@ -112,3 +108,4 @@ $properties: (margin, padding);
     // @include space-value(top, 10px);
     // @include space-value(left, 10px);
 }
+

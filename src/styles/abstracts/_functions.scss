@@ -1,0 +1,9 @@
+@function toEm($value) {
+    $remValue: ($value / 16) + em; 
+    @return $remValue;
+}
+
+// div {
+//     width: toRem(400);
+//     height: toRem(400);
+// }
